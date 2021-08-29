@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Chat App</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <style>
+        body {
+            background-color: rgb(137, 161, 207);
+        }        
+        h1 {
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+
+
+<body>
+
+    <div class="container">
+        <div id="first_page_div">
+            <div style="position: absolute; top: 20%; left: 40%;margin: -20px 0 0 -20px;">
+                <h1 style="margin-bottom:30px;">My Chat Application</h1>
+                <div>
+                    <input type="text" id="group_name" class="form-control" style="width: 100%;margin-bottom:30px;" placeholder="Type Group Name"/>
+                    <input type="text" id="user_name" class="form-control" style="width: 100%;margin-bottom:30px;" placeholder="Type Your Name"/>
+                    <button id="join_group" type="button" class="btn btn-success btn-block" style="width: 100%;" onclick="joinGroup()">Join Group</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="second_page_div" style="display:none;">
+            <div class="row" style="margin-bottom:30px;">
+                <div class="col-md-8">
+                    <h1 id="chat_label">Group Name : Online Users (4)</h1>
+                </div>
+                <div class="col-md-3">
+                    <button id="logout_group" type="button" class="btn btn-danger" onclick="logout()">Logout</button>
+                </div>
+            </div>
+            <div id="msg_area" style="overflow-y: scroll; height:400px;background-color:rgb(194, 197, 194);margin-bottom:30px;">
+            </div>
+            <div class="row">
+                <div class="col-md-10">
+                    <textarea type="text" id="group_msg" class="form-control" rows="2" style="overflow:auto;resize:none" placeholder="Message..."></textarea>
+                </div>                
+                <div class="col-md-2">
+                    <button id="send_msg_btn" type="button" onclick="sendMsg()" class="btn btn-primary" style="padding: 18px;">Send Message</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <script src="script.js"></script>
+
+</body>
+</html>
